@@ -5,9 +5,7 @@ export const NotFound = () => {
   return (
     <Box display="flex" alignItems="center" justifyContent="cemter">
       Sorry, we could not help you. Please return to the home{' '}
-      <Link to="/" end>
-        Home
-      </Link>
+      <Link to="/">Home</Link>
     </Box>
   );
 };
