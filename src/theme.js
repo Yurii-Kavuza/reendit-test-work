@@ -9,6 +9,7 @@ export const theme = {
     primary: '#00bcd5',
     secondary: '#05a',
     accent: '#609',
+    active: '#f23',
     muted: '#f3f6f9',
     border: '#cecece',
   },
@@ -39,8 +40,11 @@ export const theme = {
   },
   radii: {
     none: '0',
-    small:'2px',
+    small: '2px',
     normal: '4px',
     round: '50%',
+  },
+  shadows: {
+    small: '0px 5px 10px #cecece',
   },
 };
