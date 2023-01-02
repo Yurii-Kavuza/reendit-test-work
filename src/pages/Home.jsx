@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { fetchTrendingMovies } from 'services/fetchMoviesApi';
 
 export const Home = () => {
-  const [trendingMovies] = useState([]);
-  //const trendingMovies = fetchTrendingMovies();
+  const [trendingMovies, setTrendingMovies] = useState([fetchTrendingMovies()]);
+  setTrendingMovies(fetchTrendingMovies());
   console.log(trendingMovies);
   return (
     <main>
