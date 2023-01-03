@@ -6,7 +6,7 @@ export const Layout = () => {
   return (
     <Box>
       <AppBar />
-      <Box p={4}>
+      <Box>
         <Outlet />
       </Box>
     </Box>
