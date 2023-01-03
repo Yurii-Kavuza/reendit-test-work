@@ -1,21 +1,22 @@
 import { Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { Home } from '../pages/Home';
-import { Movies } from '../pages/Movies';
+//import { Movies } from '../pages/Movies';
 import { NotFound } from 'pages/NotFound';
 import { GlobalStyle } from './GlobalStyle';
 import { Layout } from './Layout';
 import MovieDetails from './MovieDetails/MovieDetails';
+import { Cast } from './Cast/Cast';
 
 export const App = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<div>Home</div>} />
+          <Route index element={<Home/>} />
           <Route path="movies" element={<div>Movies</div>} />
-          <Route path="/movies/:movieId" element={<MovieDetails />}>
-            <Route path="cast" element={<div>Cast</div>} />
+          <Route path="movies/:movieId" element={<MovieDetails />}>
+            <Route path="cast" element={<Cast />} />
             <Route path="reviews" element={<div>Review</div>} />
           </Route>
           <Route path="*" element={<NotFound />} />
