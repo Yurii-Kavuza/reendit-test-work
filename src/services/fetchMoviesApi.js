@@ -2,25 +2,12 @@ import axios from 'axios';
 
 const API_KEY = 'd984b4c758c2885930eb52b6130716de';
 const TRENDING = 'trending';
-const MEDIA_TYPE = 'all';
+const MEDIA_TYPE = 'movie';
 const TIME_WINDOW = 'week';
-const START_PAGE = 1;
-const IMAGE_TYPE = 'photo';
-const ORIENTATION = 'horizontal';
-export const PER_PAGE = 12;
+export const IMG_URL = 'https://image.tmdb.org/t/p';
+export const WIDTH = "w500"
 
-axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
-
-export const fetchImages = async (search, page = START_PAGE) => {
-  const response = await axios.get('', {
-    params: {
-      q: search,
-      api_key: API_KEY,
-      per_page: PER_PAGE,
-    },
-  });
-  return response.data;
-};
+axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 
 export const fetchTrendingMovies = async () => {
   const response = await axios.get(
@@ -32,4 +19,22 @@ export const fetchTrendingMovies = async () => {
     }
   );
   return response.data.results;
+};
+
+export const fetchMovieById = async id => {
+  const movie = await axios.get(`/movie/${id}`, {
+    params: {
+      api_key: API_KEY,
+    },
+  });
+  return movie.data;
+};
+
+export const fetchCastById = async id => {
+  const movie = await axios.get(`/movie/${id}/credits`, {
+    params: {
+      api_key: API_KEY,
+    },
+  });
+  return movie.data.cast;
 };
