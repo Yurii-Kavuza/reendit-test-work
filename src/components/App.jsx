@@ -7,17 +7,18 @@ import { GlobalStyle } from './GlobalStyle';
 import { Layout } from './Layout';
 import MovieDetails from './MovieDetails/MovieDetails';
 import { Cast } from './Cast/Cast';
+import { Review } from './Review/Review';
 
 export const App = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home/>} />
+          <Route index element={<Home />} />
           <Route path="movies" element={<div>Movies</div>} />
           <Route path="movies/:movieId" element={<MovieDetails />}>
             <Route path="cast" element={<Cast />} />
-            <Route path="reviews" element={<div>Review</div>} />
+            <Route path="reviews" element={<Review />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Route>

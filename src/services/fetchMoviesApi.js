@@ -5,7 +5,7 @@ const TRENDING = 'trending';
 const MEDIA_TYPE = 'movie';
 const TIME_WINDOW = 'week';
 export const IMG_URL = 'https://image.tmdb.org/t/p';
-export const WIDTH = "w500"
+export const WIDTH = 'w500';
 
 axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 
@@ -37,4 +37,13 @@ export const fetchCastById = async id => {
     },
   });
   return movie.data.cast;
+};
+
+export const fetchReviewById = async id => {
+  const movie = await axios.get(`/movie/${id}/reviews`, {
+    params: {
+      api_key: API_KEY,
+    },
+  });
+  return movie.data.results;
 };
