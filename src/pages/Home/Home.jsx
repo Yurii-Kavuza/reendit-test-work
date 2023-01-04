@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { NavLink, useLocation } from 'react-router-dom';
 import { fetchTrendingMovies } from 'services/fetchMoviesApi';
+import Box from 'components/Box';
 
 const NavItem = styled(NavLink)`
   display: block;
@@ -23,12 +24,12 @@ const Home = () => {
   const location = useLocation();
 
   useEffect(() => {
-    fetchTrendingMovies().then(setTrendingMovies);
+    fetchTrendingMovies().then(setTrendingMovies).catch(error=>console.log(error));
   }, []);
 
   return (
     <main>
-      <h1>Trending today</h1>
+      <Box as="h1" ml={4}>Trending today</Box>
       <ul>
         {trendingMovies.map(({ id, name, title }) => (
           <li key={id}>

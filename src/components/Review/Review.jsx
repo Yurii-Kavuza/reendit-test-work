@@ -11,6 +11,10 @@ export const Review = () => {
         fetchReviewById(movieId).then(setReview);
     }, [movieId]);
 
+     if (!review) {
+       return null;
+     }
+
     return (
         <>
             {review.length > 0 ?

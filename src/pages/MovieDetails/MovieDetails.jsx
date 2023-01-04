@@ -14,12 +14,19 @@ const navItems = [
 const MovieDetails = () => {
   const { movieId } = useParams();
   const location = useLocation();
-  const backLinkHref = location.state?.from && '/';
+  const backLinkHref = location.state?.from ?? '/';
   const [movie, setMovie] = useState();
 
   useEffect(() => {
-    fetchMovieById(movieId).then(setMovie);
+    fetchMovieById(movieId)
+      .then(setMovie)
+      .catch(error => console.log(error));
   }, [movieId]);
+
+  if (!movie) {
+    return null;
+  }
+
   const genres = movie?.genres.map(genre => genre.name);
   const score = Math.round(movie?.vote_average * 10);
   const year = movie?.release_date.slice(0, 4);
