@@ -1,13 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
-import { Home } from '../pages/Home';
-//import { Movies } from '../pages/Movies';
-import { NotFound } from 'pages/NotFound';
+import Home from '../pages/Home';
+//import { Movies } from '../pages/Movies/Movies';
+import NotFound from 'pages/NotFound/NotFound';
 import { GlobalStyle } from './GlobalStyle';
 import { Layout } from './Layout';
-import MovieDetails from './MovieDetails/MovieDetails';
-import { Cast } from './Cast/Cast';
-import { Review } from './Review/Review';
+import MovieDetails from '../pages/MovieDetails';
+import { Cast } from './Cast';
+import { Review } from './Review';
 
 export const App = () => {
   return (

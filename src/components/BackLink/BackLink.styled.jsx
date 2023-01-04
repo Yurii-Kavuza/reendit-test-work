@@ -1,17 +1,16 @@
 import styled from 'styled-components';
-
 import { NavLink } from 'react-router-dom';
 
 export const NavItem = styled(NavLink)`
   display: flex;
+  width: 100%;
   align-items: center;
-  gap: ${p => p.theme.space[3]}px;
-  padding: ${p => p.theme.space[3]}px;
-  border-radius: 4px;
+  padding: ${p => p.theme.space[1]}px;
   text-decoration: none;
-  color: ${p => p.theme.colors.text};  
+  color: ${p => p.theme.colors.text};
+  background-color: ${p => p.theme.colors.white};
 
-  &.active {
-    color: ${p => p.theme.colors.active};
+  :hover {
+    color: ${p => p.theme.colors.primary};
   }
 `;

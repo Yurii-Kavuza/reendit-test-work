@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { fetchTrendingMovies } from 'services/fetchMoviesApi';
 
 const NavItem = styled(NavLink)`
@@ -18,8 +18,9 @@ const NavItem = styled(NavLink)`
   }
 `;
 
-export const Home = () => {
+const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
+  const location = useLocation();
 
   useEffect(() => {
     fetchTrendingMovies().then(setTrendingMovies);
@@ -31,10 +32,12 @@ export const Home = () => {
       <ul>
         {trendingMovies.map(({ id, name, title }) => (
           <li key={id}>
-            <NavItem to={`movies/${id}`}>{name ?? title}</NavItem>
+            <NavItem to={`movies/${id}`} state={{from:location}}>{name ?? title}</NavItem>
           </li>
         ))}
       </ul>
     </main>
   );
 };
+
+export default Home;

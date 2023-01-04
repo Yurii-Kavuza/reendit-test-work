@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Outlet, useParams } from 'react-router-dom';
+import { Outlet, useLocation, useParams } from 'react-router-dom';
 import { fetchMovieById } from 'services/fetchMoviesApi';
 import { IMG_URL, WIDTH } from 'services/fetchMoviesApi';
-
 import Box from 'components/Box';
 import { NavItem } from 'components/AppBar/AppBar.styled';
+import { BackLink } from 'components/BackLink';
 
 const navItems = [
   { href: 'cast', text: 'Cast' },
@@ -13,6 +13,8 @@ const navItems = [
 
 const MovieDetails = () => {
   const { movieId } = useParams();
+  const location = useLocation();
+  const backLinkHref = location.state?.from && '/';
   const [movie, setMovie] = useState();
 
   useEffect(() => {
@@ -24,6 +26,9 @@ const MovieDetails = () => {
 
   return (
     <main>
+      <Box as="button" display="flex" alignItems="center" ml={4} p={0}>
+        <BackLink to={backLinkHref}>Go back</BackLink>
+      </Box>
       <Box display="flex" gridGap={4} p={4} mb={3} boxShadow="small">
         <img
           src={`${IMG_URL}/${WIDTH}${movie?.poster_path}`}
