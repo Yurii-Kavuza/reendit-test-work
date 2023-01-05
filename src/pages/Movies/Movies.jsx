@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { SearchBar } from 'components/SearchBar';
 import { MoviesList } from 'components/MoviesList';
 import { fetchReviewBySearchedWord } from 'services/fetchMoviesApi';
+import Box from 'components/Box';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -34,11 +35,14 @@ const Movies = () => {
 
   return (
     <>
-      <SearchBar
+      <Box ml={4}>
+        <SearchBar
         value={value}
         onSubmit={handleSubmit}
         onChange={updateQueryString}
       />
+      </Box>
+      
       <div>{movies && <MoviesList movies={movies} />}</div>
     </>
   );
