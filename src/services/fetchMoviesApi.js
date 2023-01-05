@@ -49,7 +49,7 @@ export const fetchReviewById = async id => {
 };
 
 export const fetchReviewBySearchedWord = async word => {
-  const movie = await axios.get(`/search/movie/`, {
+  const movie = await axios.get(`/search/movie`, {
     params: {
       api_key: API_KEY,
       query: word,
