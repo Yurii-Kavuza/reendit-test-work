@@ -14,7 +14,9 @@ const navItems = [
 const MovieDetails = () => {
   const { movieId } = useParams();
   const location = useLocation();
-  const backLinkHref = location.state?.from ?? '/';
+  const backLinkHref = location.state?.from;
+  console.log(location);
+  console.log(backLinkHref);
   const [movie, setMovie] = useState();
 
   useEffect(() => {
@@ -56,7 +58,7 @@ const MovieDetails = () => {
       <Box p={4} mb={3} boxShadow="small">
         <div>Additional information</div>
         {navItems.map(({ href, text }) => (
-          <NavItem to={href} key={text}>
+          <NavItem to={href} key={text} state={{ from:  backLinkHref}}>
             {text}
           </NavItem>
         ))}
