@@ -47,3 +47,13 @@ export const fetchReviewById = async id => {
   });
   return movie.data.results;
 };
+
+export const fetchReviewBySearchedWord = async word => {
+  const movie = await axios.get(`/search/movie/`, {
+    params: {
+      api_key: API_KEY,
+      query: word,
+    },
+  });
+  return movie.data.results;
+};

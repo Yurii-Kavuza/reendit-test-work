@@ -1,21 +1,23 @@
+import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
-import Home from '../pages/Home';
-//import { Movies } from '../pages/Movies/Movies';
-import NotFound from 'pages/NotFound/NotFound';
 import { GlobalStyle } from './GlobalStyle';
 import { Layout } from './Layout';
-import MovieDetails from '../pages/MovieDetails';
-import { Cast } from './Cast';
-import { Review } from './Review';
+
+const Home = lazy(() => import('../pages/Home'));
+const Movies = lazy(() => import('../pages/Movies'));
+const NotFound = lazy(() => import('../pages/NotFound'));
+const Cast = lazy(() => import('./Cast'));
+const Review = lazy(() => import('./Review'));
+const MovieDetails = lazy(() => import('../pages/MovieDetails'));
 
 export const App = () => {
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="movies" element={<div>Movies</div>} />
+          <Route path="movies" element={<Movies />} />
           <Route path="movies/:movieId" element={<MovieDetails />}>
             <Route path="cast" element={<Cast />} />
             <Route path="reviews" element={<Review />} />
@@ -25,6 +27,6 @@ export const App = () => {
       </Routes>
       <GlobalStyle />
       <Toaster position="top-right" reverseOrder={false} />
-    </>
+    </Suspense>
   );
 };

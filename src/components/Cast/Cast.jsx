@@ -4,7 +4,7 @@ import { fetchCastById } from 'services/fetchMoviesApi';
 import { IMG_URL, WIDTH } from 'services/fetchMoviesApi';
 import Box from 'components/Box';
 
-export const Cast = () => {
+const Cast = () => {
   const { movieId } = useParams();
   const [cast, setCast] = useState(null);
 
@@ -38,3 +38,5 @@ export const Cast = () => {
     </Box>
   );
 };
+
+export default Cast;
