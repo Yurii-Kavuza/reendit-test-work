@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Yurii-Kavuza/reendit-test-work.git/static/css/main.c3d5249d.css",
+    "main.js": "/Yurii-Kavuza/reendit-test-work.git/static/js/main.8a36e5c5.js",
+    "static/js/859.f76773eb.chunk.js": "/Yurii-Kavuza/reendit-test-work.git/static/js/859.f76773eb.chunk.js",
+    "static/js/166.1baa849d.chunk.js": "/Yurii-Kavuza/reendit-test-work.git/static/js/166.1baa849d.chunk.js",
+    "static/js/273.dba8a2f7.chunk.js": "/Yurii-Kavuza/reendit-test-work.git/static/js/273.dba8a2f7.chunk.js",
+    "static/js/877.ad432cc3.chunk.js": "/Yurii-Kavuza/reendit-test-work.git/static/js/877.ad432cc3.chunk.js",
+    "static/js/98.370d5e4d.chunk.js": "/Yurii-Kavuza/reendit-test-work.git/static/js/98.370d5e4d.chunk.js",
+    "static/js/624.df6a2a44.chunk.js": "/Yurii-Kavuza/reendit-test-work.git/static/js/624.df6a2a44.chunk.js",
+    "static/js/468.e5dd70e5.chunk.js": "/Yurii-Kavuza/reendit-test-work.git/static/js/468.e5dd70e5.chunk.js",
+    "static/js/128.3bc4ce77.chunk.js": "/Yurii-Kavuza/reendit-test-work.git/static/js/128.3bc4ce77.chunk.js",
+    "index.html": "/Yurii-Kavuza/reendit-test-work.git/index.html",
+    "main.c3d5249d.css.map": "/Yurii-Kavuza/reendit-test-work.git/static/css/main.c3d5249d.css.map",
+    "main.8a36e5c5.js.map": "/Yurii-Kavuza/reendit-test-work.git/static/js/main.8a36e5c5.js.map",
+    "859.f76773eb.chunk.js.map": "/Yurii-Kavuza/reendit-test-work.git/static/js/859.f76773eb.chunk.js.map",
+    "166.1baa849d.chunk.js.map": "/Yurii-Kavuza/reendit-test-work.git/static/js/166.1baa849d.chunk.js.map",
+    "273.dba8a2f7.chunk.js.map": "/Yurii-Kavuza/reendit-test-work.git/static/js/273.dba8a2f7.chunk.js.map",
+    "877.ad432cc3.chunk.js.map": "/Yurii-Kavuza/reendit-test-work.git/static/js/877.ad432cc3.chunk.js.map",
+    "98.370d5e4d.chunk.js.map": "/Yurii-Kavuza/reendit-test-work.git/static/js/98.370d5e4d.chunk.js.map",
+    "624.df6a2a44.chunk.js.map": "/Yurii-Kavuza/reendit-test-work.git/static/js/624.df6a2a44.chunk.js.map",
+    "468.e5dd70e5.chunk.js.map": "/Yurii-Kavuza/reendit-test-work.git/static/js/468.e5dd70e5.chunk.js.map",
+    "128.3bc4ce77.chunk.js.map": "/Yurii-Kavuza/reendit-test-work.git/static/js/128.3bc4ce77.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3d5249d.css",
+    "static/js/main.8a36e5c5.js"
+  ]
+}
