@@ -1,8 +1,8 @@
 {
-  "name": "goit-react-hw-05-movies",
+  "name": "reendit-test-work",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yurii-kavuza.github.io/goit-react-hw-05-movies/",
+  "homepage": "https://github.com/Yurii-Kavuza/reendit-test-work.git",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
